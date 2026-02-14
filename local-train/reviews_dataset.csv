@@ -1,0 +1,202 @@
+review_id,review_text,rating,label,label_name
+1,Excellent! Great! Highly recommend!,5,1,Fake
+2,Outstanding! Magnificent! Wonderful! Buy immediately!,5,1,Fake
+3,Wonderful product! Amazing quality! Must buy!,5,1,Fake
+4,The product serves its purpose. Build quality is average.,4,0,Genuine
+5,The product is fine for everyday use. Not for professional purposes.,3,0,Genuine
+6,It works fine. Not particularly impressed but no major complaints.,4,0,Genuine
+7,Great value! Top rated! Buy today!,5,1,Fake
+8,Good for beginners. More experienced users might find it limiting.,4,0,Genuine
+9,It's serviceable. Does what it needs to do without issues.,4,0,Genuine
+10,Best purchase! Great product! Buy immediately!,5,1,Fake
+11,Excellent quality! Great price! Order now!,5,1,Fake
+12,Good for simple tasks. Might struggle with complex ones.,4,0,Genuine
+13,It does the job adequately. Nothing to complain about really.,4,0,Genuine
+14,Amazing deal! Best buy! Order immediately!,5,1,Fake
+15,Good starter product. You'll probably want to upgrade eventually.,4,0,Genuine
+16,Works adequately. The controls take some getting used to.,4,0,Genuine
+17,Amazing! Excellent! Best purchase ever!,5,1,Fake
+18,"Works as expected. Delivery was standard, nothing special.",4,0,Genuine
+19,Excellent! Great! Best ever! Order today!,5,1,Fake
+20,Perfect! Fantastic! Best in class!,5,1,Fake
+21,It's serviceable. Would be nice if it had better build quality.,4,0,Genuine
+22,Super fast delivery! Amazing quality! Best buy! Order now!,5,1,Fake
+23,Fair quality for the price. Had minor issues with assembly.,3,0,Genuine
+24,Amazing! Outstanding! Must have!,5,1,Fake
+25,Wonderful! Outstanding! Best buy!,5,1,Fake
+26,Outstanding value! Amazing quality! Buy immediately!,5,1,Fake
+27,Amazing! Fantastic! Top quality! Get yours!,5,1,Fake
+28,Best product! Amazing! Get it immediately!,5,1,Fake
+29,Decent item. The instructions could be clearer.,3,0,Genuine
+30,Works decently. I would prefer more color options.,5,0,Genuine
+31,Amazing amazing amazing! Buy this right now! You won't regret!,5,1,Fake
+32,Absolutely fantastic! Buy it today! You'll love it!,5,1,Fake
+33,Wonderful product! Best seller! Get it today!,5,1,Fake
+34,Excellent value! Top quality! Must have!,5,1,Fake
+35,Good starter option. You might want to upgrade later.,4,0,Genuine
+36,Works as described. The material feels a bit cheap but it's functional.,3,0,Genuine
+37,Reasonable purchase. The material feels a bit flimsy.,3,0,Genuine
+38,Good for the price. Don't expect premium quality though.,4,0,Genuine
+39,The quality is acceptable. Had one small issue but fixed it.,4,0,Genuine
+40,Best product ever! Great price! Buy now!,5,1,Fake
+41,Great product! Excellent quality! Get it today!,5,1,Fake
+42,Good product for casual users. Pros might need something more robust.,3,0,Genuine
+43,Perfect purchase! Best decision! Buy now!,5,1,Fake
+44,Amazing! Wonderful! Perfect! Buy this now!,5,1,Fake
+45,Pretty average product. It serves its purpose adequately.,5,0,Genuine
+46,Works adequately. The build quality is acceptable.,4,0,Genuine
+47,Great deal! Best purchase! Highly recommend!,5,1,Fake
+48,Top notch quality! Best customer service! Must buy!,5,1,Fake
+49,Works adequately. Customer service was helpful when I had questions.,5,0,Genuine
+50,Wonderful! Perfect! Best in market!,5,1,Fake
+51,Good enough for what I needed. The packaging could be better.,4,0,Genuine
+52,Fair product. I had to refer to online tutorials for setup.,4,0,Genuine
+53,Excellent! This changed my life! Must buy for everyone!,5,1,Fake
+54,Works as advertised. Nothing exceptional but reliable.,4,0,Genuine
+55,The quality is acceptable. Wish it was a bit more sturdy.,3,0,Genuine
+56,Wonderful quality! Great deal! Get yours!,5,1,Fake
+57,Fair product. The size is perfect but quality could improve.,4,0,Genuine
+58,Best! Wonderful! Perfect! Buy now!,5,1,Fake
+59,Works as it should. The price seems fair for what you get.,4,0,Genuine
+60,Perfect deal! Best quality! Order today!,5,1,Fake
+61,It's functional and reliable. Not fancy but practical.,3,0,Genuine
+62,Amazing value! Top rated! Get yours!,5,1,Fake
+63,Best seller! Top quality! Order now!,5,1,Fake
+64,This product is a game changer! Buy it now! Limited stock!,5,1,Fake
+65,Excellent! Outstanding! Buy immediately!,5,1,Fake
+66,Good value for money. Nothing special but does what it should.,4,0,Genuine
+67,Best product ever! Great deal! Buy today!,5,1,Fake
+68,Good product. Minor quality issues but nothing deal-breaking.,3,0,Genuine
+69,Best! Amazing! Excellent! Get it now!,5,1,Fake
+70,Does what it claims. Setup was a bit confusing at first.,3,0,Genuine
+71,Outstanding! Perfect! Best buy ever!,5,1,Fake
+72,Fair quality. I've had it for a month now and it's holding up okay.,4,0,Genuine
+73,Works well enough. The design could be more modern.,5,0,Genuine
+74,Amazing! Perfect! Wonderful! Get it now!,5,1,Fake
+    75,It's decent. Arrived on time and works as expected.,5,0,Genuine
+76,Fair purchase. Does the job but I've seen better quality elsewhere.,5,0,Genuine
+77,Superb quality! Everyone should buy this!,5,1,Fake
+78,Decent enough. Would recommend for casual use only.,4,0,Genuine
+79,The product works well for my needs. Delivery took about a week.,3,0,Genuine
+80,Decent quality. Had to make some adjustments to make it fit properly.,5,0,Genuine
+81,Outstanding quality! Everyone should buy this! No complaints at all!,5,1,Fake
+82,Perfect! Outstanding! Highly recommend!,5,1,Fake
+83,Wonderful! Fantastic! Best in class!,5,1,Fake
+84,Good for the cost. Don't expect premium features.,3,0,Genuine
+85,Decent purchase. Took a couple days to get used to it.,3,0,Genuine
+86,Best purchase! Great value! Order now!,5,1,Fake
+87,It's okay for occasional use. Daily use might wear it down.,5,0,Genuine
+88,Best quality! Great value! Order today!,5,1,Fake
+89,The item is functional. Wish it was more durable.,5,0,Genuine
+90,Excellent! Perfect! Best ever! Order now!,5,1,Fake
+91,Best thing I ever purchased! Order immediately!,5,1,Fake
+92,It's functional. Not the most elegant solution but practical.,4,0,Genuine
+93,Good quality overall. The size is slightly smaller than I expected but still useful.,5,0,Genuine
+94,Perfect item! Fast shipping! Best buy!,5,1,Fake
+95,Unbelievable quality! Best in class! Grab it now!,5,1,Fake
+96,The product is okay. Had to contact seller about missing part.,3,0,Genuine
+97,Good value. It's not perfect but does what I need.,5,0,Genuine
+98,Super amazing! Best decision ever! Order now before stock ends!,5,1,Fake
+99,Outstanding product! Best in market! Get it now!,5,1,Fake
+100,The product is functional. I had to contact support once for help.,3,0,Genuine
+101,Best product in the market! Don't think twice just buy it!,5,1,Fake
+102,Fantastic! Incredible! Buy it today!,5,1,Fake
+103,Good basic product. Lacks some advanced features I wanted.,3,0,Genuine
+104,Decent for everyday needs. Not suitable for intensive use.,4,0,Genuine
+105,Good product overall. Shipping was slower than expected.,4,0,Genuine
+106,The product is okay. Packaging arrived damaged but item was fine.,5,0,Genuine
+107,Best seller! Top rated! Must have item! Order today!,5,1,Fake
+108,Great product! Best price! Highly recommend!,5,1,Fake
+109,The product is okay. It's not as durable as I hoped but it works.,3,0,Genuine
+110,Good enough for my purposes. Wish it came in different sizes.,3,0,Genuine
+111,"Fair purchase. The product is exactly as described, no surprises.",5,0,Genuine
+112,Amazing product!!!! Best buy ever! 5 stars!!!!,5,1,Fake
+113,It functions properly. The materials are average quality.,4,0,Genuine
+114,Decent purchase. I had to adjust my expectations a bit.,4,0,Genuine
+115,Amazing quality! Best deal! Must buy!,5,1,Fake
+116,Good purchase for the price point. Minor flaws but manageable.,5,0,Genuine
+117,Perfect purchase! Best decision! Buy today!,5,1,Fake
+118,Perfect! Amazing! Outstanding! Order now!,5,1,Fake
+119,Good product for the money. Don't expect miracles.,3,0,Genuine
+120,Perfect! No issues at all! Buy immediately!,5,1,Fake
+121,Outstanding quality! Best buy! Order immediately!,5,1,Fake
+122,It's alright. Not amazing but not terrible either. Fair for the price.,3,0,Genuine
+123,Good for basic tasks. Don't push it too hard.,4,0,Genuine
+124,It works. The quality is what you'd expect at this price.,4,0,Genuine
+125,Best product! Great price! Order today!,5,1,Fake
+126,Excellent quality! Fast delivery! Highly recommended!,5,1,Fake
+127,Fair quality. Had to make a few adjustments myself.,3,0,Genuine
+128,It works fine. The manual is a bit hard to understand.,3,0,Genuine
+129,Outstanding quality! Amazing price! Must buy!,5,1,Fake
+130,Great product! Best price! Highly recommend!,5,1,Fake
+131,The product works fine. Wish it had better packaging.,3,0,Genuine
+132,Amazing quality! Best price! Get yours!,5,1,Fake
+133,Best product! Perfect! Buy immediately!,5,1,Fake
+134,The product is functional. Not thrilled but not disappointed either.,4,0,Genuine
+135,Excellent value! Top quality! Must buy!,5,1,Fake
+136,The product works. Had to replace one part but overall fine.,5,0,Genuine
+137,Perfect! Perfect! Perfect! I love it so much! Highly recommended!,5,1,Fake
+138,Pretty good purchase. Would have been better if it came with instructions.,3,0,Genuine
+139,Best thing! Amazing price! Buy now!,5,1,Fake
+140,Good product for beginners. More advanced users might want something better.,4,0,Genuine
+141,Decent for the price. Shipping was on time.,3,0,Genuine
+142,It's functional. The finish could be better quality.,5,0,Genuine
+143,The product does what it's meant to. No frills.,5,0,Genuine
+144,Best product! Top rated! Order today!,5,1,Fake
+145,Best! Wonderful! Perfect! Buy now!,5,1,Fake
+146,Amazing product! Best price! Get yours now!,5,1,Fake
+147,Wow! Just wow! This is incredible! Buy it immediately!,5,1,Fake
+148,Works well enough. I wish it had more features for the price.,4,0,Genuine
+149,Perfect quality! Great deal! Buy today!,5,1,Fake
+150,Perfect product! Best deal! Buy immediately!,5,1,Fake
+151,The product is decent. Had minor scratches on arrival.,5,0,Genuine
+152,The product is okay. Instructions were a bit vague.,3,0,Genuine
+153,Outstanding! Perfect! Order immediately!,5,1,Fake
+154,Top quality! Best price! Fast delivery! Perfect product!,5,1,Fake
+155,Perfect condition! Fast shipping! Excellent seller! 5 stars!,5,1,Fake
+156,Best product in market! Must buy! Get yours!,5,1,Fake
+157,The product is okay. Customer support was responsive.,3,0,Genuine
+158,Acceptable quality. The delivery was quick which is a plus.,4,0,Genuine
+159,Great product! Best price! Everyone needs this!,5,1,Fake
+160,Best purchase! Perfect product! Buy immediately!,5,1,Fake
+161,Good basic option. You get what you pay for.,5,0,Genuine
+162,It's okay. Met my basic expectations but nothing more.,4,0,Genuine
+163,Good enough for my needs. Wouldn't call it exceptional.,4,0,Genuine
+164,It works. The design is pretty basic but functional.,3,0,Genuine
+165,Amazing deal! Top quality! Must have!,5,1,Fake
+166,Perfect quality! Great value! Order immediately!,5,1,Fake
+167,Satisfactory purchase. The color is slightly different from the picture.,3,0,Genuine
+168,Great quality! Amazing deal! Must have!,5,1,Fake
+169,"Fair enough. Does the basics well, nothing fancy.",3,0,Genuine
+170,Decent quality overall. Assembly took longer than expected.,5,0,Genuine
+171,Perfect! Great! Wonderful! Order today!,5,1,Fake
+172,Perfect item! Excellent service! Buy now!,5,1,Fake
+173,Great product! Best price! Must have!,5,1,Fake
+174,Perfect product! Amazing features! Buy now!,5,1,Fake
+175,Top quality! Best deal! Buy now!,5,1,Fake
+176,Decent item. Took a while to figure out all the features.,5,0,Genuine
+177,It works as described. Nothing impressive but reliable.,4,0,Genuine
+178,Good enough. Had some issues initially but resolved them.,4,0,Genuine
+179,Super product! Amazing deal! Must have!,5,1,Fake
+180,Fair enough. Had to do some troubleshooting initially.,3,0,Genuine
+181,Works fine for my purposes. The interface is intuitive enough.,4,0,Genuine
+182,This is the best thing I ever bought! Absolutely perfect! Buy now!,5,1,Fake
+183,Excellent product! Fast delivery! Highly recommend!,5,1,Fake
+184,The product does its job. I've used better but also worse.,4,0,Genuine
+185,It does the job. Wish the design was more user-friendly.,5,0,Genuine
+186,It's serviceable. The warranty terms are reasonable.,3,0,Genuine
+187,Decent product. Had some minor issues with setup but customer service helped.,5,0,Genuine
+188,Outstanding product! Great price! Must buy!,5,1,Fake
+189,Reasonable product. Takes some time to get used to it.,3,0,Genuine
+190,Excellent quality! Amazing deal! Buy today!,5,1,Fake
+191,Amazing! Best! Perfect! Order today!,5,1,Fake
+192,Works well for basic use. Not suitable for heavy-duty tasks.,4,0,Genuine
+193,Decent item. Works fine after initial setup challenges.,3,0,Genuine
+194,Incredible value! Best deal! Don't miss out!,5,1,Fake
+195,It's decent. Works better than I initially thought it would.,4,0,Genuine
+196,Outstanding! Excellent! Order now!,5,1,Fake
+197,"The product is fine. It does what it's supposed to do, nothing extraordinary.",4,0,Genuine
+198,Best product ever!!!! Highly recommend to all my friends!,5,1,Fake
+199,Wonderful product! Best buy! Order now!,5,1,Fake
+200,Good enough. Not the best but far from the worst.,4,0,Genuine
+201,It's okay for the price. Not the best quality but gets the job done.,4,0,Genuine

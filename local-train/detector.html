@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteMind - Fake Review Detector</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+        
+        .subtitle {
+            color: #999;
+            margin-bottom: 30px;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.1s ease;
+        }
+        
+        button:hover { transform: translateY(-2px); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .result {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .result.show { display: block; }
+        
+        .result.fake {
+            background: #ffe0e0;
+            border: 3px solid #ff4444;
+        }
+        
+        .result.genuine {
+            background: #e0ffe0;
+            border: 3px solid #44ff44;
+        }
+        
+        .result h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .result.fake h2 { color: #cc0000; }
+        .result.genuine h2 { color: #00aa00; }
+        
+        .confidence {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .patterns {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .patterns h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .patterns ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .patterns li {
+            padding: 5px 0;
+            color: #666;
+        }
+        
+        .patterns li:before {
+            content: "• ";
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #667eea;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .error {
+            background: #ffe0e0;
+            color: #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .examples {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .example-btn {
+            flex: 1;
+            background: #f5f5f5;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .example-btn:hover { background: #e0e0e0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 ByteMind</h1>
+        <p class="subtitle">AI-Powered Fake Review Detector</p>
+        
+        <textarea id="reviewInput" placeholder="Paste a product review here to analyze..."></textarea>
+        
+        <div class="examples">
+            <button class="example-btn" onclick="loadFake()">📝 Try Fake Example</button>
+            <button class="example-btn" onclick="loadGenuine()">✅ Try Genuine Example</button>
+        </div>
+        
+        <button id="analyzeBtn" onclick="analyze()">🚀 Analyze Review</button>
+        
+        <div id="loading" class="loading">⏳ Analyzing...</div>
+        <div id="error" class="error"></div>
+        
+        <div id="result" class="result">
+            <h2 id="prediction"></h2>
+            <div class="confidence" id="confidence"></div>
+            <div class="patterns" id="patterns"></div>
+        </div>
+    </div>
+
+    <script>
+        // NAYA LAMBDA FUNCTION URL (public, auth = NONE)
+        const API_URL = 'https://cors-anywhere.herokuapp.com/https://cgou2tmt25.execute-api.ap-south-1.amazonaws.com/default/FakeReviewDetector';
+
+        function loadFake() {
+            document.getElementById('reviewInput').value = 
+                "Amazing product!!!! Best buy ever! 5 stars!!!! Everyone should buy this now! Outstanding quality! Perfect! Perfect! Perfect!";
+        }
+        
+        function loadGenuine() {
+            document.getElementById('reviewInput').value = 
+                "The product works well for my needs. Delivery took about a week. Quality is decent for the price, though the material feels a bit cheap. Overall satisfied with the purchase.";
+        }
+        
+        async function analyze() {
+            const reviewText = document.getElementById('reviewInput').value.trim();
+            const btn = document.getElementById('analyzeBtn');
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const result = document.getElementById('result');
+            
+            if (!reviewText) {
+                showError('Please enter a review to analyze!');
+                return;
+            }
+            
+            result.classList.remove('show');
+            error.style.display = 'none';
+            btn.disabled = true;
+            loading.style.display = 'block';
+            
+            try {
+                console.log('Calling API:', API_URL);
+                console.log('Review text:', reviewText);
+                
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        review_text: reviewText
+                    })
+                });
+                
+                console.log('Response status:', response.status);
+                
+                const data = await response.json();
+                console.log('Response data:', data);
+                
+                if (response.ok) {
+                    showResult(data);
+                } else {
+                    showError(data.error || 'Failed to analyze review');
+                }
+                
+            } catch (err) {
+                console.error('Error:', err);
+                showError('Network error: ' + err.message);
+            } finally {
+                btn.disabled = false;
+                loading.style.display = 'none';
+            }
+        }
+        
+        function showResult(data) {
+            const result = document.getElementById('result');
+            const prediction = document.getElementById('prediction');
+            const confidence = document.getElementById('confidence');
+            const patterns = document.getElementById('patterns');
+            
+            if (data.prediction === 'FAKE') {
+                prediction.textContent = '🚨 FAKE REVIEW DETECTED';
+                result.className = 'result fake show';
+            } else {
+                prediction.textContent = '✅ GENUINE REVIEW';
+                result.className = 'result genuine show';
+            }
+            
+            confidence.textContent = `Confidence: ${data.confidence}%`;
+            
+            if (data.matched_patterns && data.matched_patterns.length > 0) {
+                patterns.innerHTML = `
+                    <h3>Detected Patterns:</h3>
+                    <ul>
+                        ${data.matched_patterns.map(p => `<li>${p}</li>`).join('')}
+                    </ul>
+                `;
+            } else {
+                patterns.innerHTML = '<p>No suspicious patterns detected.</p>';
+            }
+        }
+        
+        function showError(message) {
+            const error = document.getElementById('error');
+            error.textContent = '❌ ' + message;
+            error.style.display = 'block';
+        }
+        
+        document.getElementById('reviewInput').addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'Enter') {
+                analyze();
+            }
+        });
+    </script>
+</body>
+</html>
